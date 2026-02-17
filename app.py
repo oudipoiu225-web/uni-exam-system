@@ -120,4 +120,7 @@ def logout():
     return redirect(url_for('home'))
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    # رندر خودش یه پورت مشخص می‌کنه، اگر نبود از ۵۰۰۰ استفاده کن
+    port = int(os.environ.get("PORT", 5000))
+    # حتماً باید host روی 0.0.0.0 باشه تا از بیرون دیده بشه
+    app.run(host='0.0.0.0', port=port)
