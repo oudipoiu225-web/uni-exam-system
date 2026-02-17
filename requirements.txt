@@ -2,3 +2,4 @@ flask
 pymongo[srv]
 dnspython
 gunicorn
+werkzeug
